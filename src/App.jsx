@@ -8,12 +8,12 @@ import { motion } from 'framer-motion'
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 overflow-x-hidden">
-      {/* Ambient gradient field using brand colors */}
+    <div className="min-h-screen bg-white text-slate-900 overflow-x-hidden">
+      {/* Ambient gradient field using brand colors on light theme */}
       <div className="fixed inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900" />
-        {/* Soft vignette */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(76,218,208,0.12),transparent)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-slate-50" />
+        {/* Soft brand tints */}
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(76,218,208,0.10),transparent)]" />
         {/* Animated color blobs */}
         <motion.div
           className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full blur-3xl opacity-50"
@@ -44,13 +44,13 @@ function App() {
         <CTA />
       </main>
 
-      <footer className="relative border-t border-white/10">
+      <footer className="relative border-t border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <p className="text-sm text-slate-400">© {new Date().getFullYear()} Reveal. All rights reserved.</p>
-          <div className="flex items-center gap-6 text-sm text-slate-300/80">
-            <a href="#" className="hover:text-white">Privacy</a>
-            <a href="#" className="hover:text-white">Terms</a>
-            <a href="#" className="hover:text-white">Security</a>
+          <p className="text-sm text-slate-500">© {new Date().getFullYear()} Reveal. All rights reserved.</p>
+          <div className="flex items-center gap-6 text-sm text-slate-600">
+            <a href="#" className="hover:text-slate-900">Privacy</a>
+            <a href="#" className="hover:text-slate-900">Terms</a>
+            <a href="#" className="hover:text-slate-900">Security</a>
           </div>
         </div>
       </footer>

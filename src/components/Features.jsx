@@ -37,11 +37,11 @@ const items = [
 export default function Features(){
   return (
     <section id="features" className="relative py-20 sm:py-28">
-      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(900px 400px at 10% 10%, rgba(195,174,239,0.18), transparent 60%)' }}></div>
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(900px 400px at 10% 10%, rgba(195,174,239,0.12), transparent 60%)' }}></div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-white">Built for clarity</h2>
-          <p className="mt-3 text-slate-300/90">Everything you need to catch hidden costs before you commit.</p>
+          <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">Built for clarity</h2>
+          <p className="mt-3 text-slate-600">Everything you need to catch hidden costs before you commit.</p>
         </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -50,15 +50,15 @@ export default function Features(){
               key={idx}
               whileHover={{ y: -4, scale: 1.01 }}
               transition={{ type: 'spring', stiffness: 250, damping: 20 }}
-              className="group relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 overflow-hidden">
-              <div className="absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition" style={{ background: 'linear-gradient(120deg, rgba(76,218,208,0.18), rgba(195,174,239,0.18), rgba(237,190,192,0.16))' }}></div>
+              className="group relative rounded-2xl border border-slate-200 bg-white p-6 overflow-hidden shadow-sm">
+              <div className="absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition" style={{ background: 'linear-gradient(120deg, rgba(76,218,208,0.14), rgba(195,174,239,0.14), rgba(237,190,192,0.12))' }}></div>
               <div className="relative">
-                <div className="h-11 w-11 grid place-items-center rounded-xl text-slate-900 border border-white/10"
+                <div className="h-11 w-11 grid place-items-center rounded-xl text-slate-900 border border-slate-200"
                      style={{ background: 'linear-gradient(135deg, #4CDAD0 0%, #C3AEEF 70%)' }}>
                   <it.icon className="h-5 w-5 text-slate-900" />
                 </div>
-                <h3 className="mt-4 text-white font-medium">{it.title}</h3>
-                <p className="mt-2 text-sm text-slate-300/90 leading-relaxed">{it.desc}</p>
+                <h3 className="mt-4 text-slate-900 font-medium">{it.title}</h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">{it.desc}</p>
               </div>
             </motion.div>
           ))}

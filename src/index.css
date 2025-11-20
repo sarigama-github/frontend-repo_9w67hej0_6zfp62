@@ -13,12 +13,13 @@
   }
 
   html {
-    font-family: var(--font-sans);
+    font-family: var(--font-manrope);
     font-feature-settings: "rlig" 1, "calt" 1;
+    color-scheme: light;
   }
 
   body {
-    @apply antialiased;
+    @apply antialiased bg-white text-slate-900;
   }
 }
 
