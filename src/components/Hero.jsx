@@ -1,17 +1,20 @@
 import Spline from '@splinetool/react-spline';
 import { ArrowRight, Shield, Search } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-16 sm:pt-24 pb-24">
       <div className="absolute inset-0">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(56,189,248,0.25),transparent)]"></div>
-        <div className="pointer-events-none absolute -top-32 right-0 h-[600px] w-[800px] bg-gradient-to-br from-cyan-400/20 via-indigo-400/10 to-transparent blur-3xl"></div>
+        {/* Brand glow field */}
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(76,218,208,0.20),transparent)]"></div>
+        <div className="pointer-events-none absolute -top-32 right-0 h-[600px] w-[800px] blur-3xl"
+             style={{ background:'linear-gradient(135deg, rgba(195,174,239,0.18), rgba(237,190,192,0.12))' }}></div>
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative grid lg:grid-cols-2 gap-10 items-center">
         <div className="relative z-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-cyan-200">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-teal-200/90">
             <Shield className="h-3.5 w-3.5" /> AI-powered fee finder
           </div>
           <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white">
@@ -22,7 +25,8 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="#cta" className="group inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 bg-gradient-to-r from-cyan-400 to-indigo-500 text-slate-900 font-semibold shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30">
+            <a href="#cta" className="group inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-slate-900 font-semibold shadow-lg transition shadow-teal-300/20 hover:shadow-teal-300/30"
+               style={{ background: 'linear-gradient(90deg, #4CDAD0, #C3AEEF)' }}>
               Try Reveal free
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
             </a>
@@ -38,11 +42,18 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative h-[420px] sm:h-[520px] lg:h-[560px]">
+        <motion.div className="relative h-[420px] sm:h-[520px] lg:h-[560px]" animate={{ y: [0, -6, 0] }} transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}>
           <div className="absolute inset-0 rounded-3xl border border-white/10 bg-slate-950/30 backdrop-blur-xl overflow-hidden shadow-2xl shadow-slate-900/70">
+            {/* Subtle animated border gradient */}
+            <motion.div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: 'conic-gradient(from 0deg, rgba(76,218,208,0.25), rgba(195,174,239,0.25), rgba(237,190,192,0.2), rgba(76,218,208,0.25))' }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 24, repeat: Infinity, ease: 'linear' }}
+            />
             <Spline scene="https://prod.spline.design/41MGRk-UDPKO-l6W/scene.splinecode" style={{ width: '100%', height: '100%' }} />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

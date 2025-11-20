@@ -10,7 +10,7 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <a href="#" className="inline-flex items-center gap-2">
             <div className="relative">
-              <span className="absolute inset-0 rounded-xl bg-gradient-to-tr from-cyan-400 via-sky-300 to-indigo-400 blur opacity-60"></span>
+              <span className="absolute inset-0 rounded-xl blur opacity-60" style={{ background:'linear-gradient(45deg, #4CDAD0, #C3AEEF, #EDBEC0)' }}></span>
               <span className="relative grid h-9 w-9 place-items-center rounded-xl bg-slate-800/80 text-white text-lg font-bold shadow-inner shadow-slate-900/50">R</span>
             </div>
             <span className="text-white text-lg font-semibold tracking-tight">Reveal</span>
@@ -24,7 +24,7 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-3">
             <a href="#pricing" className="px-4 py-2 rounded-xl text-slate-200 hover:text-white transition">Log in</a>
-            <a href="#cta" className="group inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-400 to-indigo-500 text-slate-900 font-semibold shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 transition">
+            <a href="#cta" className="group inline-flex items-center gap-2 px-4 py-2 rounded-xl text-slate-900 font-semibold shadow-lg transition" style={{ background:'linear-gradient(90deg, #4CDAD0, #C3AEEF)' }}>
               Get started
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
@@ -40,7 +40,9 @@ export default function Navbar() {
             <a href="#features" className="text-slate-200">Features</a>
             <a href="#pricing" className="text-slate-200">Pricing</a>
             <a href="#testimonials" className="text-slate-200">Stories</a>
-            <a href="#cta" className="mt-2 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-400 to-indigo-500 text-slate-900 font-semibold">Get started</a>
+            <a href="#cta" className="mt-2 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-slate-900 font-semibold" style={{ background:'linear-gradient(90deg, #4CDAD0, #C3AEEF)' }}>
+              Get started
+            </a>
           </div>
         )}
       </div>
